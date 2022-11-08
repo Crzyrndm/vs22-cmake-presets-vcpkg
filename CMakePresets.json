@@ -1,0 +1,14 @@
+{
+  "version": 4,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 24
+  },
+  "include": [
+    ".cmake/presets/hidden.json",
+    ".cmake/presets/windows-ninja-multi.json"
+  ],
+  "configurePresets": [],
+  "buildPresets": [],
+  "testPresets": []
+}

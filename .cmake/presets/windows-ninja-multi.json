@@ -1,0 +1,73 @@
+{
+    "version": 4,
+    "include": [
+        "hidden.json"
+    ],
+    "configurePresets": [
+        {
+            "name": "windows-ninja-multi",
+            "description": "Build for windows using Ninja Multi-Config as the build system",
+            "inherits": [
+                "base-defines",
+                "windows"
+            ],
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "generator": "Ninja Multi-Config"
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "windows-ninja-Debug",
+            "configurePreset": "windows-ninja-multi",
+            "configuration": "Debug",
+            "inherits": "base"
+        },
+        {
+            "name": "windows-ninja-Release",
+            "configurePreset": "windows-ninja-multi",
+            "configuration": "Release",
+            "inherits": "base"
+        },
+        {
+            "name": "windows-ninja-RelWithDebInfo",
+            "configurePreset": "windows-ninja-multi",
+            "configuration": "RelWithDebInfo",
+            "inherits": "base"
+        },
+        {
+            "name": "windows-ninja-MinSizeRel",
+            "configurePreset": "windows-ninja-multi",
+            "configuration": "MinSizeRel",
+            "inherits": "base"
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "windows-ninja-Debug",
+            "inherits": "base",
+            "configurePreset": "windows-ninja-multi",
+            "configuration": "Debug"
+        },
+        {
+            "name": "windows-ninja-Release",
+            "inherits": "base",
+            "configurePreset": "windows-ninja-multi",
+            "configuration": "Release"
+        },
+        {
+            "name": "windows-ninja-RelWithDebInfo",
+            "inherits": "base",
+            "configurePreset": "windows-ninja-multi",
+            "configuration": "RelWithDebInfo"
+        },
+        {
+            "name": "windows-ninja-MinSizeRel",
+            "inherits": "base",
+            "configurePreset": "windows-ninja-multi",
+            "configuration": "MinSizeRel"
+        }
+    ]
+}

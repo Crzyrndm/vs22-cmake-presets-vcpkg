@@ -1,0 +1,28 @@
+{
+    "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
+    "name": "vs22-vcpkg-presets",
+    "version-semver": "0.1.0",
+    "dependencies": [
+        {
+            "name": "expected-lite",
+            "version>=": "0.6.2"
+        },
+        {
+            "name": "gsl-lite",
+            "version>=": "0.40.0"
+        }
+    ],
+    "default-features": [],
+    "features": {
+        "tests": {
+            "description": "Required to build tests",
+            "dependencies": [
+                {
+                    "name": "catch2",
+                    "version>=": "3.1.1"
+                },
+                "fmt"
+            ]
+        }
+    }
+}
